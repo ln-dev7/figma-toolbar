@@ -20,16 +20,33 @@ export default function App() {
   const [selected, setSelected] = useState(1);
   const spring = {
     type: "spring",
-    stiffness: 700,
-    damping: 30,
+    stiffness: 1000,
+    damping: 100,
+    duration: 0.3,
   };
   return (
-    <main className="relative w-full min-h-screen flex items-center justify-center px-4 py-10">
-      <motion.div className="shadow-box rounded-xl flex items-center gap-1.5">
-        <motion.div className="h-12">
-          <AnimatePresence>
+    <main className="relative w-full min-h-screen flex items-center justify-center px-4 py-10 bg-[#f5f5f5]">
+      <motion.div
+        className="shadow-box rounded-xl flex items-center gap-1.5 bg-white overflow-hidden"
+        transition={spring}
+      >
+        <AnimatePresence mode="wait">
+          <motion.div
+            className="h-12"
+            initial={{ width: devMode ? 192 : 400 }}
+            animate={{ width: devMode ? 192 : 400 }}
+            exit={{ width: devMode ? 192 : 400 }}
+            transition={{ delay: 0.1, ...spring }}
+          >
             {!devMode ? (
-              <motion.div className="flex items-center justify-center p-2 gap-4 h-full">
+              <motion.div
+                className="flex items-center justify-center p-2 gap-4 h-full"
+                initial={{ opacity: 0, filter: "blur(4px)", y: 50 }}
+                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                exit={{ opacity: 0, filter: "blur(4px)", y: -50 }}
+                transition={{ delay: 0.15, ...spring }}
+                key="normal"
+              >
                 <button
                   className="flex items-center justify-center gap-1 h-full"
                   onClick={() => setSelected(1)}
@@ -157,7 +174,14 @@ export default function App() {
                 </button>
               </motion.div>
             ) : (
-              <motion.div className="flex items-center justify-center p-2 gap-4 h-full">
+              <motion.div
+                className="flex items-center justify-center p-2 gap-4 h-full"
+                initial={{ opacity: 0, filter: "blur(4px)", y: -50 }}
+                animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+                exit={{ opacity: 0, filter: "blur(4px)", y: 50 }}
+                transition={{ delay: 0.15, ...spring }}
+                key="dev"
+              >
                 <button
                   className="flex items-center justify-center gap-1 rounded-md p-1.5 relative w-8 h-8 shrink-0"
                   onClick={() => setSelected(1)}
@@ -220,8 +244,8 @@ export default function App() {
                 </button>
               </motion.div>
             )}
-          </AnimatePresence>
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
         <div className="bg-[#E6E6E6] w-[1px] self-stretch"></div>
         <div className="pl-2 pr-3 py-2.5 flex items-start h-12">
           <button
