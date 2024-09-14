@@ -14,7 +14,6 @@ import {
   Text,
 } from "./icons";
 
-// Types
 type IconComponent = React.FC<{ className?: string }>;
 
 interface ToolbarButtonProps {
@@ -37,15 +36,13 @@ interface DevToggleProps {
   setSelected: (value: number) => void;
 }
 
-// Animations
 const spring = {
   type: "spring" as const,
-  stiffness: 250,
-  damping: 25,
+  stiffness: 200,
+  damping: 20,
   duration: 0.3,
 };
 
-// Components
 const ToolbarButton: React.FC<ToolbarButtonProps> = ({
   icon: Icon,
   selected,
@@ -84,9 +81,9 @@ const NormalToolbar: React.FC<
 > = ({ selected, setSelected }) => (
   <motion.div
     className="flex items-center justify-center p-2 gap-4 h-full"
-    initial={{ opacity: 0, filter: "blur(4px)", y: 50 }}
-    animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-    exit={{ opacity: 0, filter: "blur(4px)", y: -50 }}
+    initial={{ filter: "blur(10px)", y: -48 }}
+    animate={{ filter: "blur(0px)", y: 0 }}
+    exit={{ filter: "blur(10px)", y: -48 }}
     transition={{ delay: 0.15, ...spring }}
     key="normal"
   >
@@ -138,9 +135,9 @@ const DevToolbar: React.FC<Pick<ToolbarProps, "selected" | "setSelected">> = ({
 }) => (
   <motion.div
     className="flex items-center justify-center p-2 gap-4 h-full"
-    initial={{ opacity: 0, filter: "blur(4px)", y: -50 }}
-    animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-    exit={{ opacity: 0, filter: "blur(4px)", y: 50 }}
+    initial={{ filter: "blur(10px)", y: 48 }}
+    animate={{ filter: "blur(0px)", y: 0 }}
+    exit={{ filter: "blur(10px)", y: 48 }}
     transition={{ delay: 0.15, ...spring }}
     key="dev"
   >
