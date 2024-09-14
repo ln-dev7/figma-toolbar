@@ -2,8 +2,8 @@ import React from "react";
 
 export const Pointer: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="17"
-    height="17"
+    width="20"
+    height="20"
     viewBox="0 0 17 17"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -18,8 +18,8 @@ export const Pointer: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const Frame: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="16"
-    height="16"
+    width="20"
+    height="20"
     viewBox="0 0 16 16"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -34,23 +34,30 @@ export const Frame: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   </svg>
 );
 
-export const Rectgangle: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const Rectangle: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="16"
-    height="16"
+    width="20"
+    height="20"
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <rect x="0.5" y="0.5" width="15" height="15" rx="1.5" stroke="currentColor" />
+    <rect
+      x="0.5"
+      y="0.5"
+      width="15"
+      height="15"
+      rx="1.5"
+      stroke="currentColor"
+    />
   </svg>
 );
 
 export const Pen: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="16"
-    height="16"
+    width="20"
+    height="20"
     viewBox="0 0 16 16"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +74,8 @@ export const Pen: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const Text: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="15"
-    height="15"
+    width="20"
+    height="20"
     viewBox="0 0 15 15"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -85,8 +92,8 @@ export const Text: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const Comment: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="16"
-    height="16"
+    width="20"
+    height="20"
     viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -101,8 +108,8 @@ export const Comment: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const Actions: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="15"
-    height="16"
+    width="20"
+    height="20"
     viewBox="0 0 15 16"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -119,8 +126,8 @@ export const Actions: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const Dev: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="16"
-    height="8"
+    width="20"
+    height="10"
     viewBox="0 0 16 8"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -137,8 +144,8 @@ export const Dev: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const Measure: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="17"
-    height="17"
+    width="20"
+    height="20"
     viewBox="0 0 17 17"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -155,8 +162,8 @@ export const Measure: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const Annotate: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg
-    width="17"
-    height="17"
+    width="20"
+    height="20"
     viewBox="0 0 17 17"
     fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
@@ -168,18 +175,5 @@ export const Annotate: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
       d="M11.7692 3.8369L4.67896 10.9272L4.85312 12.4946L6.42057 12.6688L13.5108 5.5785C13.4706 5.53795 13.4331 5.49328 13.3991 5.44454L12.8866 4.71047C12.8193 4.61404 12.7355 4.53025 12.6391 4.46293L11.905 3.95047C11.8556 3.91593 11.8103 3.87787 11.7692 3.8369ZM14.3842 1.11854C13.9913 0.778632 13.3967 0.795245 13.0235 1.16838L3.97185 10.2201C3.75704 10.4349 3.65153 10.7357 3.68507 11.0376L3.85924 12.6051C3.91089 13.0699 4.27784 13.4369 4.74269 13.4885L6.31014 13.6627C6.61206 13.6962 6.91287 13.5907 7.12768 13.3759L14.8888 5.61476C14.9015 5.6033 14.9139 5.59146 14.9262 5.57923L16.1803 4.32506C16.5709 3.93453 16.5709 3.30137 16.1803 2.91084L14.4387 1.16923C14.421 1.15153 14.4028 1.13463 14.3842 1.11854ZM13.7316 1.8764L12.4774 3.13051L13.2115 3.64297C13.4044 3.7776 13.572 3.9452 13.7066 4.13804L14.2183 4.87104L15.4722 3.6171L13.7316 1.8764ZM1.96777 3.3631C1.69163 3.3631 1.46777 3.58696 1.46777 3.8631V14.9731C1.46777 15.2492 1.69163 15.4731 1.96777 15.4731H13.0777C13.3539 15.4731 13.5777 15.2492 13.5777 14.9731V8.54408H14.5777V14.9731C14.5777 15.8015 13.9062 16.4731 13.0777 16.4731H1.96777C1.13935 16.4731 0.467773 15.8015 0.467773 14.9731V3.8631C0.467773 3.03468 1.13935 2.3631 1.96777 2.3631H8.39675V3.3631H1.96777Z"
       fill="currentColor"
     />
-  </svg>
-);
-
-export const ChevronDown: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg
-    width="6"
-    height="4"
-    viewBox="0 0 6 4"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <path d="M1 1L3 3L5 1" stroke="currentColor" stroke-linejoin="bevel" />
   </svg>
 );
