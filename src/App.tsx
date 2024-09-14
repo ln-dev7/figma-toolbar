@@ -18,24 +18,24 @@ import {
 export default function App() {
   const [devMode, setDevMode] = useState(false);
   const [selected, setSelected] = useState(1);
-  // const spring = {
-  //   type: "spring",
-  //   stiffness: 700,
-  //   damping: 30,
-  // };
+  const spring = {
+    type: "spring",
+    stiffness: 700,
+    damping: 30,
+  };
   return (
     <main className="relative w-full min-h-screen flex items-center justify-center px-4 py-10">
       <motion.div className="shadow-box rounded-xl flex items-center gap-1.5">
-        <motion.div className="">
+        <motion.div className="h-12">
           <AnimatePresence>
             {!devMode ? (
-              <motion.div className="flex items-center justify-center p-2 gap-4">
+              <motion.div className="flex items-center justify-center p-2 gap-4 h-full">
                 <button
                   className="flex items-center justify-center gap-1 h-full"
                   onClick={() => setSelected(1)}
                 >
                   <div
-                    className="flex items-center justify-center rounded-md p-1.5 relative"
+                    className="flex items-center justify-center rounded-md p-1.5 relative w-8 h-8 shrink-0"
                     style={{
                       color: selected === 1 ? "#FFF" : "#1A1A1A",
                     }}
@@ -55,7 +55,7 @@ export default function App() {
                   onClick={() => setSelected(2)}
                 >
                   <div
-                    className="flex items-center justify-center rounded-md p-1.5 relative"
+                    className="flex items-center justify-center rounded-md p-1.5 relative w-8 h-8 shrink-0"
                     style={{
                       color: selected === 2 ? "#FFF" : "#1A1A1A",
                     }}
@@ -75,7 +75,7 @@ export default function App() {
                   onClick={() => setSelected(3)}
                 >
                   <div
-                    className="flex items-center justify-center rounded-md p-1.5 relative"
+                    className="flex items-center justify-center rounded-md p-1.5 relative w-8 h-8 shrink-0"
                     style={{
                       color: selected === 3 ? "#FFF" : "#1A1A1A",
                     }}
@@ -95,7 +95,7 @@ export default function App() {
                   onClick={() => setSelected(4)}
                 >
                   <div
-                    className="flex items-center justify-center rounded-md p-1.5 relative"
+                    className="flex items-center justify-center rounded-md p-1.5 relative w-8 h-8 shrink-0"
                     style={{
                       color: selected === 4 ? "#FFF" : "#1A1A1A",
                     }}
@@ -111,7 +111,7 @@ export default function App() {
                   <ChevronDown size={12} strokeWidth={1.5} />
                 </button>
                 <button
-                  className="flex items-center justify-center gap-1 rounded-md p-1 relative"
+                  className="flex items-center justify-center gap-1 rounded-md p-1.5 relative w-8 h-8 shrink-0"
                   onClick={() => setSelected(5)}
                   style={{
                     color: selected === 5 ? "#FFF" : "#1A1A1A",
@@ -126,7 +126,7 @@ export default function App() {
                   )}
                 </button>
                 <button
-                  className="flex items-center justify-center gap-1 rounded-md p-1 relative"
+                  className="flex items-center justify-center gap-1 rounded-md p-1.5 relative w-8 h-8 shrink-0"
                   onClick={() => setSelected(6)}
                   style={{
                     color: selected === 6 ? "#FFF" : "#1A1A1A",
@@ -141,7 +141,7 @@ export default function App() {
                   )}
                 </button>
                 <button
-                  className="flex items-center justify-center gap-1 rounded-md p-1 relative"
+                  className="flex items-center justify-center gap-1 rounded-md p-1.5 relative w-8 h-8 shrink-0"
                   onClick={() => setSelected(7)}
                   style={{
                     color: selected === 7 ? "#FFF" : "#1A1A1A",
@@ -157,9 +157,9 @@ export default function App() {
                 </button>
               </motion.div>
             ) : (
-              <motion.div className="flex items-center justify-center p-2 gap-4">
+              <motion.div className="flex items-center justify-center p-2 gap-4 h-full">
                 <button
-                  className="flex items-center justify-center gap-1 rounded-md p-1 relative"
+                  className="flex items-center justify-center gap-1 rounded-md p-1.5 relative w-8 h-8 shrink-0"
                   onClick={() => setSelected(1)}
                   style={{
                     color: selected === 1 ? "#FFF" : "#1A1A1A",
@@ -174,7 +174,7 @@ export default function App() {
                   )}
                 </button>
                 <button
-                  className="flex items-center justify-center gap-1 rounded-md p-1 relative"
+                  className="flex items-center justify-center gap-1 rounded-md p-1.5 relative w-8 h-8 shrink-0"
                   onClick={() => setSelected(2)}
                   style={{
                     color: selected === 2 ? "#FFF" : "#1A1A1A",
@@ -189,7 +189,7 @@ export default function App() {
                   )}
                 </button>
                 <button
-                  className="flex items-center justify-center gap-1 rounded-md p-1 relative"
+                  className="flex items-center justify-center gap-1 rounded-md p-1.5 relative w-8 h-8 shrink-0"
                   onClick={() => setSelected(3)}
                   style={{
                     color: selected === 3 ? "#FFF" : "#1A1A1A",
@@ -204,7 +204,7 @@ export default function App() {
                   )}
                 </button>
                 <button
-                  className="flex items-center justify-center gap-1 rounded-md p-1 relative"
+                  className="flex items-center justify-center gap-1 rounded-md p-1.5 relative w-8 h-8 shrink-0"
                   onClick={() => setSelected(4)}
                   style={{
                     color: selected === 4 ? "#FFF" : "#1A1A1A",
